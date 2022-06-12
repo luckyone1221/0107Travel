@@ -1,0 +1,63 @@
+mixin sDestinations(data)
+	// start sDestinations
+	+b.sDestinations.section#sDestinations&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/@2x/sDestinationsBg.jpg" alt="")
+		+e.slider-wrap
+			.swiper-container.sDestinations-slider-js
+				.swiper-wrapper
+					.swiper-slide
+						+e.box
+							//-img(loading="lazy" src="img/svg/sDestinations-line.svg" alt="")
+							+sDestinationsItem({
+								imgName: "sweeden",
+								title: "Sweden",
+							})
+							+sDestinationsItem({
+								imgName: "usa",
+								title: "usa",
+							})
+							+sDestinationsItem({
+								imgName: "Spain",
+								title: "spain",
+							})
+							+sDestinationsItem({
+								imgName: "brazil",
+								title: "Brazil",
+							})
+							+sDestinationsItem({
+								imgName: "Indonesia",
+								title: "Indonesia",
+							})
+							+sDestinationsItem({
+								imgName: "Great Britain",
+								title: "Great Britain",
+							})
+							+sDestinationsItem({
+								imgName: "France",
+								title: "France",
+							})
+							+sDestinationsItem({
+								imgName: "Germany",
+								title: "Germany",
+							})
+							+sDestinationsItem({
+								imgName: "Mexico",
+								title: "Mexico",
+							})
+							//-
+								+sDestinationsItem({
+									imgName: "",
+									title: "",
+								})
+	// end sDestinations
+
+mixin sDestinationsItem(data)
+	+e.item(href=`${data.href || "#"}`)
+		+e.item-box
+			+e.item-img
+				img(loading="lazy" src=`img/@2x/${data.imgName}.png` alt="")
+			+e.item-txt
+				+e.title=data.title
+				+e.cord=`${data.cord1 || "47.1388422"}`
+				+e.cord=`${data.cord2 || "72.9917328"}`

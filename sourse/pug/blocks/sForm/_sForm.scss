@@ -1,0 +1,66 @@
+// start .sForm
+.sForm {
+	padding: 40px 0px;
+	&__box{
+		background: $white;
+		border: 5px solid #B5060B;
+
+		padding: 24px 16px;
+		@include media-breakpoint-up(sm){
+			padding: 32px 24px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 36px 45px;
+		}
+	}
+	//
+	.section-title{
+		margin-bottom: 30px;
+
+		h4{
+			font-weight: 500;
+			font-size: rem(20);
+			line-height: 1.2;
+			color: $black;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__input{
+		@include mt();
+		border: 1px solid rgba(0, 0, 0, 0.5) !important;
+		outline: none!important;
+
+		box-shadow: none!important;
+		&:focus{
+			box-shadow: 1px 0 6px 0 rgb(0 0 0 / 26%) !important;
+		}
+
+		border-radius: 0!important;
+		width: 100%;
+		padding: 20px;
+		font-size: 13px;
+		line-height: calc(16/13);
+		letter-spacing: 0.1em;
+	}
+	&__row{
+		@include roww(20px);
+		//--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(20)};
+
+		margin-bottom: #{rem(30)};
+	}
+	&__btn{
+		cursor: pointer;
+		border: none!important;
+		outline: none!important;
+	}
+	&__{}
+	&__{}
+} // end.sForm
+
+#shedule-mod{
+	max-width: 1020px!important;
+}

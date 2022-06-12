@@ -1,0 +1,15 @@
+.form-wrap{
+ 	&__input-wrap{
+
+ 	}
+	&__input {
+		resize: none;
+	}
+ 	&__btn{
+ 		cursor: pointer;
+ 	}
+ 	label{
+ 		width: 100%;
+ 		display: block;
+ 	}
+}

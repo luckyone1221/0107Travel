@@ -1,0 +1,55 @@
+mixin mob-mnu()
+	+b.menu-mobile--js
+		+e.inner
+			+e.box--top
+				.row.align-items-center
+					.col
+						+e.logo(href='/')
+							img(loading="lazy" src="img/@2x/logo.png" alt="")
+					.col-auto
+						+e.close-btn.menu-btn-js
+							img(loading="lazy" src="img/svg/cross.svg" alt="")
+			+e.box--menu.menu-box-js
+				ul
+					li: a(href="#") Расписание
+					li: a(href="#") Цены
+					li: a(href="#") О клубе
+					li: a(href="#") Тренеры
+					li: a(href="#") Отзывы
+					li: a(href="#") Фото
+					li: a(href="#") Видео
+					li: a(href="#") Контакты
+			+e.box--foot
+				+e.tell-link(href="tel:+74951061112")
+					+e.t-val +7 (495) 106-11-12
+					+e.t-img
+						img(loading="lazy" src="img/svg/tell-red.svg" alt="")
+				+e.tell-link(href="tel:+79666662754")
+					+e.t-val +7 (966) 666-27-54
+					+e.t-img
+						img(loading="lazy" src="img/svg/tell-wa.svg" alt="")
+				div
+					+e.callback(class="header_btn fancy" href="#order" data-order="Обратный звонок с меню") Обратный звонок
+				div
+					+e.mail(href="mailto:misunov@dzanshin.com") misunov@dzanshin.com
+				div
+					+e.mail(href="mailto:kolomitsev@dzanshin.com") kolomitsev@dzanshin.com
+				+b.soc
+					+socItem('vk', 'https://vk.com/dzanshin_karate')
+					+socItem('fb', 'https://www.facebook.com/Dzanshin')
+					+socItem('inst', 'https://www.instagram.com/dzanshin.karate')
+
+
+mixin socItem(iconName, linkHref)
+	+e.item(href=linkHref target="_blank")
+		img(loading="lazy" src=`img/svg/soc-${iconName}.svg` alt="")
+
+
+mixin top-nav()
+	+b.top-nav--js.block-with-lazy
+		.container
+			+e.menu-btn.menu-btn-js
+				+e.burger.toggle-menu-mobile
+					span
+				+e.mb-btn-txt Меню
+	// end top-nav

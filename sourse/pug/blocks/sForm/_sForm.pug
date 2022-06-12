@@ -1,0 +1,28 @@
+mixin sForm(data)
+	// start sForm
+	+b.sForm.section#sForm&attributes(attributes)
+		.container
+			+e.box
+				+b.section-title.text-center
+					h4 Оставьте ваши пожелания по удобному времени и дням. В случае наличия большого количества запросов на схожее время и дни, мы откроем отдельную группу под вас.
+				form(action="php/send.php" method="post")
+					<input type="hidden" name="token" class="token" value="03AGdBq26CjBBlSPHuxbSLJbtka5on_cvc6p14IecNSw2gw4l9uXx0KY4WQ5i--EnxLgLm1lnVii-kZ5bTOavg7NuSHfOoICRVMlGq5a4pLrsz6EKnHh6Pu5rzQybm3AfjOo97JxwbG4oMcmAXCoTQ0koS85T7ABhTclJymfLpbzpwk9Wod3OLuGkKc42AvWRFVoEhQjDtPUl6LicTU1TFeZdz1kAQbaPOS6RpQVhHt35XAhhpddaWs-UndEbUCKVL6LBJyqsxBzsSlnMtDM0Q6o3t5rDlHuPNfYrfy9ugTA4Yu0HT172LP7ORSzCG2yZ_yNqBa2BTvdQf-jFqm3yacdticHE3HkYfHAAjmJD9vcPB0CDIBEaGiKwXNg4Ce36Txp6zsl7OsNRR7Oyb1XEvJv84ctMYN0NOJjvltBFP8uPLraMKfRDaH5JcPBE1ZziUIXx2vSHOaYR7yOBT4Sr8JRd8lGdOOqMGbA">
+					input.from-inp-js(type="hidden" value="" name="formname")
+					+e.row.row
+						.col-lg-4
+							+e.INPUT.input.form-control(type="text" placeholder="Введите ваше имя" name="name")
+						.col-lg-4
+							+e.INPUT.input.form-control(type="tel" placeholder="Введите ваш телефон" name="phone")
+						.col-lg-4
+							+e.INPUT.input.form-control(type="number" placeholder="Введите возраст ребенка" name="age")
+						.col-lg-4
+							+e.INPUT.input.form-control(type="text" placeholder="Удобное время тренировок" name="time")
+						.col-lg-4
+							+e.INPUT.input.form-control(type="text" placeholder="Дни тренировок" name="days")
+						.col-lg-4
+							+e.btn.callback_btn(type="submit") отправить
+					.politic.text-center
+						| Нажимая кнопку «Отправить», Вы соглашаетесь на обработку
+						|
+						a.link.tdu.fancy(href='#polytics' target='_blank') персональных данных
+	// end sForm

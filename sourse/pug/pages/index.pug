@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+include ../blocks/sPrices/_sPrices.pug
+include ../blocks/sShedule/_sShedule.pug
+include ../blocks/top-nav/_top-nav.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sDestinations/_sDestinations.pug
+
+block variables
+	- let  mainPage= 'main-page'
+	- let  bg= '2.png'
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	//-+b.header-img
+		img(loading="lazy" src="img/@2x/header-img.png" alt="")
+	//+mob-mnu
+	//+top-nav()
+	//.redBox
+	+sDestinations()
+	//.redBox
+	//+sPrices()
+	//+sShedule()
+	//+sForm()
+	//a.link-modal-js(href="#modal-call") sadasdsa
+	//a.link-modal-js(href="#modal-call") sadasdsa
+	//+mob-mnu()
+	//+icon("telegram")
+	//+header()
+	//+top-nav()
+	//+topLine()
+	//+headerBlock()
+	//+sForm()
+	//+sContact()
+	//+footer()

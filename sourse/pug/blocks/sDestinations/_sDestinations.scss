@@ -1,0 +1,172 @@
+// start .sDestinations
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.sDestinations {
+	--sPT: 0px;
+	--sPB: 0px;
+	font-family: $default-font;
+
+	position: relative;
+	z-index: 1;
+
+	min-height: 480px;
+	@include media-breakpoint-up(md){
+		min-height: 619px;
+	}
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 100%;
+
+		width: 1500px;
+		@include media-breakpoint-up(md){
+			width: 1920px;
+		}
+		height: 100%;
+
+		//min-width: 100vw;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__slider-wrap{
+		position: absolute;
+		z-index: 2;
+		top: 143px;
+		@include media-breakpoint-up(md){
+			top: 232px;
+		}
+		left: 0;
+		width: 100%;
+
+		.swiper-container{}
+		.swiper-wrapper{}
+		.swiper-slide{
+			width: 3807px;
+		}
+	}
+	&__box{
+		background-image: url(../img/svg/sDestinations-line.svg);
+		background-position: top left;
+		background-repeat: repeat-x;
+		width: 3807px;
+		height: 217px;
+	}
+	&__item{
+		display: block;
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		text-decoration: none;
+		color: black;
+		padding-bottom: 20px;
+
+		&:hover{
+			--dot-scale: 0.7;
+		}
+
+		&:after{
+			@include mt();
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 52px;
+			transform: translateY(-50%) translateY(-50%) scale(var(--dot-scale, 1));
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #59815b;
+		}
+
+		&:nth-child(1){
+			left: 118px;
+			top: 46px;
+		}
+		&:nth-child(2){
+			left: 628px;
+			top: -81px;
+		}
+		&:nth-child(3){
+			left: 999px;
+			top: 130px;
+		}
+		&:nth-child(4){
+			left: 1430px;
+			top: -53px;
+		}
+		&:nth-child(5){
+			left: 1689px;
+			top: 44px;
+		}
+		&:nth-child(6){
+			left: 2200px;
+			top: -85px;
+		}
+		&:nth-child(7){
+			left: 2571px;
+			top: 127px;
+		}
+		&:nth-child(8){
+			left: 3002px;
+			top: -56px;
+		}
+		&:nth-child(9){
+			left: 3263px;
+			top: 43px;
+		}
+
+	}
+	&__item-box{
+		display: flex;
+		//align-items: center;
+	}
+	&__item-img{
+		display: block;
+		margin-right: 8px;
+
+		min-width: 105px;
+		//height: 75px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__item-txt{
+	}
+	&__title{
+		white-space: nowrap;
+		letter-spacing: -.02em;
+		font-size: 22px;
+		line-height: 1.2;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__cord{
+		font-weight: 400;
+		font-size: 15px;
+		color: #59815b;
+		text-transform: uppercase;
+		margin: 0;
+		line-height: calc(18/15);
+	}
+	//
+	&__{}
+	&__{}
+} // end.sDestinations
+
+.redBox{
+	height: 100px;
+	background-color: pink;
+}
