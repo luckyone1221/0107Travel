@@ -10,7 +10,9 @@ body{
 }
 
 .sDestinations {
-	overflow-x: hidden;
+	overflow: hidden;
+	max-width: 100%;
+
 	--sPT: 0px;
 	--sPB: 0px;
 	font-family: $default-font;
